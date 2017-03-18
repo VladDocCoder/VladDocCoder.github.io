@@ -1,0 +1,60 @@
+body, #mainWrapper {
+    height: 70%;
+}
+
+body, .form-control {
+    font-size: 17px !important;
+}
+
+body, .form-controlTwo {
+    font-size: 20px;
+    height: 50px;
+    min-width: 450px;
+    border-color: white;
+    border-width: 0.5px;
+}
+
+.round-button {
+    border: 5px solid #ddd;
+    border-radius: 50px;
+    max-width: 50px;
+    box-shadow: 0 0 5px black;
+}
+
+.delete-button {
+    border: 2px solid white;
+    box-shadow: 0 0 5px black;
+}
+
+.floatRight {
+    float: right;
+    margin-right: 25px;
+}
+
+.has-error {
+    color: red;
+}
+
+.formcontainer {
+    background-color: springgreen;
+    padding: 20px;
+
+}
+
+.tablecontainer {
+    padding-left: 20px;
+    background-color: palegreen;
+
+}
+
+.generic-container {
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+
+}
+
+.custom-width {
+    width: 80px !important;
+}
+
