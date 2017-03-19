@@ -1,14 +1,5 @@
 'use strict';
 
-var gulp = require('gulp');
-var ghPages = require('gulp-gh-pages');
-
-gulp.task('deploy', function() {
-    return gulp.src('./dist/**/*')
-        .pipe(ghPages());
-});
-
-
 var fs = require('fs');
 var gulp = require('gulp');
 
@@ -29,4 +20,10 @@ fs.readdirSync('./gulp').filter(function(file) {
  */
 gulp.task('default', ['clean'], function () {
     gulp.start('build');
+});
+
+var ghPages = require('gulp-gh-pages');
+gulp.task('deploy', function() {
+    return gulp.src('start/serve/**/*')
+        .pipe(ghPages());
 });
