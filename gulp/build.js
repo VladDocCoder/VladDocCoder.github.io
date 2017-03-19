@@ -11,7 +11,7 @@ var $ = require('gulp-load-plugins')({
 gulp.task('partials', function () {
   return gulp.src([
     path.join(conf.paths.src, '/app/**/*.html'),
-    path.join(conf.paths.tmp, '/serve/app/**/*.html')
+    path.join(conf.paths.start, '/serve/app/**/*.html')
   ])
     .pipe($.htmlmin({
       removeEmptyAttributes: true,
@@ -23,14 +23,14 @@ gulp.task('partials', function () {
       module: 'testAngularApp',
       root: 'myApp'
     }))
-    .pipe(gulp.dest(conf.paths.tmp + '/partials/'));
+    .pipe(gulp.dest(conf.paths.start + '/partials/'));
 });
 
 gulp.task('html', ['inject', 'partials'], function () {
-  var partialsInjectFile = gulp.src(path.join(conf.paths.tmp, '/partials/templateCacheHtml.js'), { read: false });
+  var partialsInjectFile = gulp.src(path.join(conf.paths.start, '/partials/templateCacheHtml.js'), { read: false });
   var partialsInjectOptions = {
     starttag: '<!-- inject:partials -->',
-    ignorePath: path.join(conf.paths.tmp, '/partials'),
+    ignorePath: path.join(conf.paths.start, '/partials'),
     addRootSlash: false
   };
 
@@ -38,7 +38,7 @@ gulp.task('html', ['inject', 'partials'], function () {
   var jsFilter = $.filter('**/*.js', { restore: true });
   var cssFilter = $.filter('**/*.css', { restore: true });
 
-  return gulp.src(path.join(conf.paths.tmp, '/serve/*.html'))
+  return gulp.src(path.join(conf.paths.start, '/serve/*.html'))
     .pipe($.inject(partialsInjectFile, partialsInjectOptions))
     .pipe($.useref())
     .pipe(jsFilter)
@@ -90,7 +90,7 @@ gulp.task('other', function () {
 });
 
 gulp.task('clean', function () {
-  return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]);
+  return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.start, '/')]);
 });
 
 gulp.task('build', ['html', 'fonts', 'other']);
