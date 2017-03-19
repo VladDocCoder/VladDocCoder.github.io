@@ -70,10 +70,16 @@ function ItemController($localStorage, toastr) {
     };
 
     vm.getItemInfo = function (item) {
+        var equals = false;
         for (var i = 0; i < vm.comments.length; i++) {
             if (vm.comments[i].id === item.commentId) {
                 toastr.info(vm.comments[i].text);
+                equals = true;
+                break;
             }
+        }
+        if(!equals){
+            toastr.info("There are no comments about the item '" + item.name + "'");
         }
     }
 }
