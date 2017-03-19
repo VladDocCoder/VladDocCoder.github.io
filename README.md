@@ -1,1 +1,1 @@
-AngularJS Test Application
+Smart AngularJS Test Application
