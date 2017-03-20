@@ -1,7 +1,6 @@
 'use strict';
 
-//var backandSync = require('../sync-module');
-var connect = require('gulp-connect');
+
 var fs = require('fs');
 var gulp = require('gulp');
 
@@ -29,22 +28,3 @@ gulp.task('deploy', function() {
     return gulp.src('start/serve/**/*')
         .pipe(ghPages());
 });
-
-gulp.task('serve', function() {
-    connect.server({
-        fallback: 'index.html',
-        livereload: true
-    });
-});
-
-/*
-gulp.task('sts', function(){
-    var masterToken = "your master backand token";
-    var userToken = "your user backand token";
-    return backandSync.sts(masterToken, userToken);
-});
-
-gulp.task('dist',['sts'], function() {
-    var folder = "./src";
-    return backandSync.dist(folder);
-});*/

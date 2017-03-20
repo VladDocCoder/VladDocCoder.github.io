@@ -3,6 +3,7 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
+var connect = require('gulp-connect');
 
 var browserSync = require('browser-sync');
 var browserSyncSpa = require('browser-sync-spa');
@@ -42,15 +43,24 @@ function browserSyncInit(baseDir, browser) {
   });
 }
 
-/*browserSync.use(browserSyncSpa({
+browserSync.use(browserSyncSpa({
   selector: '[ng-app]'// Only needed for angular apps
-}));*/
+}));
 
-/*gulp.task('serve', ['watch'], function () {
+gulp.task('serve', ['watch'], function () {
   browserSyncInit([path.join(conf.paths.start, '/serve'), conf.paths.src]);
-});*/
+});
 
-/*gulp.task('serve:dist', ['build'], function () {
+gulp.task('serve:dist', ['build'], function () {
   browserSyncInit(conf.paths.dist);
-});*/
+});
+
+/*gulp.task('serve', function() {
+ connect.server({
+ fallback: 'index.html',
+ livereload: true
+ });
+ });*/
+
+gulp.src('./index.html').pipe(connect.reload());
 
