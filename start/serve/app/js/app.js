@@ -4,7 +4,7 @@ angular.module('myApp',[
     'ngStorage', 'toastr', 'ngRoute'
 ]).config(["$routeProvider", function($routeProvider) {
     $routeProvider.when("/", {
-        templateUrl: "/index.html",
+        templateUrl: "./index.html",
         controller: "ItemController"
     });
 } ]);
