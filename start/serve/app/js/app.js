@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp',[
+var myApp = angular.module('myApp',[
     'ngStorage', 'toastr', 'ngRoute'
 ]).config(["$routeProvider", function($routeProvider) {
     $routeProvider.when("/", {
@@ -8,6 +8,7 @@ angular.module('myApp',[
         controller: "ItemController"
     });
 } ]);
+
 
 
 

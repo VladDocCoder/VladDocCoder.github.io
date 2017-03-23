@@ -2,10 +2,10 @@
 
 var fs = require('fs');
 var gulp = require('gulp');
-   var awspublish = require('gulp-awspublish');
+/*   var awspublish = require('gulp-awspublish');
 
 var localConfig = {
-    buildSrc: './build/**/*',
+    buildSrc: './build/!**!/!*',
     getAwsConf: function (environment) {
         var conf = require('../../config/aws');
         if (!conf[environment]) {
@@ -27,7 +27,7 @@ gulp.task('s3:production', ['build:production'], function() {
         .pipe(publisher.cache())
         .pipe(publisher.sync())
         .pipe(awspublish.reporter());
-});
+});*/
 
 /**
  *  This will load all js or coffee files in the gulp directory
