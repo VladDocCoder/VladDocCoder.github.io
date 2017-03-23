@@ -1,0 +1,12 @@
+<RoutingRules>
+    <RoutingRule>
+        <Condition>
+            <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
+        </Condition>
+        <Redirect>
+            <HostName>vladdoccoder.github.io</HostName>
+            <Protocol>https</Protocol>
+            <ReplaceKeyPrefixWith>#/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+</RoutingRules>
