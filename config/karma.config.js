@@ -3,9 +3,9 @@ module.exports = function(config){
         basePath : '../',
 
         files : [
-            'app/bower_components/angular/angular.js',
-            'app/bower_components/angular/angular-*.js',
-            'start/serve/app/**/*.js'
+            './bower_components/angular/angular.js',
+            './bower_components/angular/angular-*.js',
+            '../app/serve/**/*.js'
         ],
 
         exclude : [
