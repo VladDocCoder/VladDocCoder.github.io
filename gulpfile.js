@@ -1,8 +1,8 @@
 'use strict';
 
 var fs = require('fs');
-var gulp = require('gulp'),
-    awspublish = require('gulp-awspublish');
+var gulp = require('gulp');
+   var awspublish = require('gulp-awspublish');
 
 var localConfig = {
     buildSrc: './build/**/*',
