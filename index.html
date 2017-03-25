@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <script src="bower_components/angular/angular.js"></script>
@@ -69,7 +69,7 @@
 
     <div class="generic-container col-md-6">
         <div class="panel panel-default">
-            &lt;!&ndash; Default panel contents &ndash;&gt;
+            <!-- Default panel contents -->
             <div class="panel-heading"><span class="lead">Comments # 2</span></div>
             <table class="table table-hover table-condensed">
                 <tr ng-repeat="comment in ctrl.comments track by comment.id">
@@ -106,29 +106,5 @@
         </div>
     </div>
 </div>
-</body>
-</html>-->
-
-<!doctype html>
-<html lang="en" ng-app="myApp">
-<head>
-    <link rel="stylesheet" href="https://unpkg.com/angular-toastr/dist/angular-toastr.css"/>
-    <link rel="stylesheet" href="util/css/bootstrap.css">
-    <link rel="stylesheet" href="util/css/app.css">
-    <meta charset="utf-8">
-    <base href="/">
-    <title>Test Angular Application</title>
-    <meta name="viewport" content="width=device-width">
-</head>
-<body>
-<div ui-view>
-<div  ng-include src="'util/welcome.html'"></div>
-</div>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/ngstorage/ngStorage.js"></script>
-<script src="util/js/app.js"></script>
-<script src="util/js/item_controller.js"></script>
-<script src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
 </body>
 </html>
