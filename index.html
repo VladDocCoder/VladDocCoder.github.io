@@ -1,16 +1,15 @@
-<!--
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/ngstorage/ngStorage.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/item_controller.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="app/serve/js/app.js"></script>
+    <script src="app/serve/js/item_controller.js"></script>
     <script src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
-    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/angular-toastr/dist/angular-toastr.css"/>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="app/serve/css/bootstrap.css">
+    <link rel="stylesheet" href="app/serve/css/app.css">
     <meta charset="utf-8">
     <base href="/">
     <title>Test Angular Application</title>
@@ -108,29 +107,28 @@
     </div>
 </div>
 </body>
-</html>
--->
+</html>-->
 
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
     <link rel="stylesheet" href="https://unpkg.com/angular-toastr/dist/angular-toastr.css"/>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="util/css/bootstrap.css">
+    <link rel="stylesheet" href="util/css/app.css">
     <meta charset="utf-8">
     <base href="/">
     <title>Test Angular Application</title>
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
-
-<div ng-include src="'welcome.html'"></div>
-
-<script src="../../bower_components/angular/angular.js"></script>
-<script src="../../bower_components/ngstorage/ngStorage.js"></script>
-<script src="js/app.js"></script>
-<script src="js/item_controller.js"></script>
+<div ui-view>
+<div  ng-include src="'util/welcome.html'"></div>
+</div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/ngstorage/ngStorage.js"></script>
+<script src="util/js/app.js"></script>
+<script src="util/js/item_controller.js"></script>
 <script src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
-<script src="../../bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
 </body>
 </html>

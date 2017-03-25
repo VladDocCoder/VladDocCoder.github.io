@@ -6,7 +6,7 @@ var myApp = angular
 ])
     .config(["$routeProvider", function($routeProvider) {
     $routeProvider.when("/", {
-        templateUrl: "./index.html",
+        templateUrl: "**/welcome.html",
         controller: "ItemController"
     });
 } ]);

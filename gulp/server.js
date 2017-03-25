@@ -53,6 +53,10 @@ gulp.task('serve', ['watch'], function () {
 
 gulp.task('serve:dist', ['build'], function () {
   browserSyncInit(conf.paths.dist);
+    connect.server({
+        fallback: 'index.html',
+        livereload: true
+    });
 });
 
 /*gulp.task('serve', function() {
